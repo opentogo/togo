@@ -14,6 +14,7 @@ type Togo struct {
 	server      *http.Server
 }
 
+// Init will set up the name, logging, and the HTTP server.
 func Init(appName string, config Config) *Togo {
 	Logger.SetPrefix(fmt.Sprintf("[%s] ", appName))
 
@@ -51,6 +52,7 @@ func (t *Togo) Register(service Service) {
 	t.server.Handler = loggingHandler(mux)
 }
 
+// Run will start the HTTP server for Togo.
 func (t Togo) Run() error {
 	Logger.Printf("Running at %s\n", t.server.Addr)
 	return t.server.ListenAndServe()
