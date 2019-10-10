@@ -1,0 +1,11 @@
+language: go
+install:
+  - go mod download
+script:
+  - go test -covermode=atomic -race ./...
+env:
+  global:
+    - GO111MODULE=on
+    - GOPROXY=https://proxy.golang.org
+go:
+  - 1.x
