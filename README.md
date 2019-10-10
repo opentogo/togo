@@ -1,5 +1,9 @@
 # togo
 
+[![GoDoc](https://godoc.org/github.com/opentogo/togo?status.png)](https://godoc.org/github.com/opentogo/togo)
+[![Go Report Card](https://goreportcard.com/badge/github.com/opentogo/togo)](https://goreportcard.com/report/github.com/opentogo/togo)
+[![Open Source Helpers](https://www.codetriage.com/opentogo/togo/badges/users.svg)](https://www.codetriage.com/opentogo/togo)
+
 This package was inspired in [gizmo from The New York Times](https://github.com/nytimes/gizmo) and it offer a simple way to build your microservices with no external dependencies in Go.
 
 ## Installation
