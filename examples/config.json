@@ -1,0 +1,7 @@
+{
+    "http_addr": "",
+    "http_port": 3000,
+    "idle_timeout": 30,
+    "read_timeout": 5,
+    "write_timeout": 10
+}
