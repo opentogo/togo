@@ -1,6 +1,8 @@
 # togo
 
+[![Build Status](https://travis-ci.org/opentogo/togo.svg?branch=master)](https://travis-ci.org/opentogo/togo)
 [![GoDoc](https://godoc.org/github.com/opentogo/togo?status.png)](https://godoc.org/github.com/opentogo/togo)
+[![codecov](https://codecov.io/gh/opentogo/togo/branch/master/graph/badge.svg)](https://codecov.io/gh/opentogo/togo)
 [![Go Report Card](https://goreportcard.com/badge/github.com/opentogo/togo)](https://goreportcard.com/report/github.com/opentogo/togo)
 [![Open Source Helpers](https://www.codetriage.com/opentogo/togo/badges/users.svg)](https://www.codetriage.com/opentogo/togo)
 
