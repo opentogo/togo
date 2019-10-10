@@ -1,4 +1,4 @@
-module github.com/rogeriozambon/togo
+module github.com/opentogo/togo
 
 go 1.13
 
