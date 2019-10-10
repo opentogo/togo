@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 )
 
+// Config holds info required to configure a togo.server.
 type Config struct {
 	HTTPAddr     string `json:"http_addr"`
 	HTTPPort     int    `json:"http_port"`
@@ -14,6 +15,9 @@ type Config struct {
 	LogFilename  string `json:"log_filename"`
 }
 
+// LoadJSONFile attempts to read a specified JSON file by provided filename.
+// It then attempts to unmarshal the JSON data into a Config type object.
+// It returns a populated Config or any errors it encountered during the JSON file load and parse.
 func LoadJSONFile(filename string) (config Config) {
 	var (
 		content []byte

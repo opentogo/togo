@@ -11,8 +11,10 @@ import (
 const logPattern = "%s - - [%s] \"%s %s %s\" %d %d %q %q %.4f\n"
 
 var (
+	// Logger is the global logger for the server.
 	Logger = log.New(os.Stdout, "", 0)
-	now    = func() time.Time {
+
+	now = func() time.Time {
 		return time.Now().UTC()
 	}
 )
