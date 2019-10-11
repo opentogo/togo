@@ -8,6 +8,16 @@ import (
 	"time"
 )
 
+// Togo is a microservice application server. To use, you create an instance, passing a name and a configuration.
+// You then register services to your instance, and then call `Run()`.
+// Example:
+//  t := togo.Init("my-togo", togo.LoadJSONFile("config.json"))
+//  t.Register(myservice.New())
+//
+//  if err := t.Run(); err != nil {
+//      fmt.Fprintf(os.Stderr, "%v", err)
+//      os.Exit(1)
+//  }
 type Togo struct {
 	appName     string
 	logFilename string
@@ -30,6 +40,7 @@ func Init(appName string, config Config) *Togo {
 	}
 }
 
+// Register adds the specified togo.Service to the Togo server.
 func (t *Togo) Register(service Service) {
 	mux := http.NewServeMux()
 
