@@ -1,0 +1,6 @@
+github.com/allisson/go-assert v0.1.1 h1:4DdHig8GuMsH39WlzUcANs3GshZFU3Q3u/0dnLb9UrM=
+github.com/allisson/go-assert v0.1.1/go.mod h1:8Wn5ewj+IJHWp1pjLTOD//T1ryfFyHVmJreugvqlVYc=
+github.com/opentogo/logger v0.2.0 h1:XIsLnXzlFa8dPn1kZsE/miqugRp+n7SF/Njq9/WJDWQ=
+github.com/opentogo/logger v0.2.0/go.mod h1:8BYaMvyBkXZjE9kbh0PgvXlX6wQtCdjWr/pXsMWHPB0=
+github.com/opentogo/router v0.2.0 h1:3KfHIEuIH/exEqoCqxqryolzDn8ch1uYh5Y1oweeXvw=
+github.com/opentogo/router v0.2.0/go.mod h1:ggbbBPsebvftynAFJmAeLwxpneoKg6gYINZghwsy8+M=
