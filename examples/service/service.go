@@ -43,7 +43,7 @@ func (s Service) Middleware(next http.HandlerFunc) http.HandlerFunc {
 func (s Service) Resources() []togo.Resource {
 	return []togo.Resource{
 		{
-			Path:    "/cats/{id:[0-9]+}",
+			Path:    "/cats/:id",
 			Method:  http.MethodGet,
 			Handler: GetCats("my-dependency"),
 		},

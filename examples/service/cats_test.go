@@ -16,7 +16,7 @@ func TestService_GetCats(t *testing.T) {
 		w      = httptest.NewRecorder()
 	)
 
-	router.Handler(http.MethodGet, "/svc/togo/cats/{id:[0-9]+}", GetCats("none"))
+	router.Handler(http.MethodGet, "/svc/togo/cats/:id", GetCats("none"))
 	router.ServeHTTP(w, r)
 
 	assert.Equal(t, http.StatusOK, w.Code)
