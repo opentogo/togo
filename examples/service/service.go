@@ -3,6 +3,7 @@ package service
 import (
 	"net/http"
 
+	"github.com/opentogo/middlewares"
 	"github.com/opentogo/togo"
 )
 
@@ -22,10 +23,20 @@ func (s Service) Prefix() string {
 
 // Middleware defines the middleware stack that requests to this service will run through
 func (s Service) Middleware(next http.HandlerFunc) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		togo.Log.Println("This middleware is enabled.")
-		next.ServeHTTP(w, r)
-	}
+	middlewares.Use(
+		middlewares.NewIPSpoofing(),
+		middlewares.NewPathTraversal(),
+		middlewares.NewRemoteReferer([]string{
+			http.MethodDelete,
+			http.MethodGet,
+			http.MethodPatch,
+			http.MethodPost,
+			http.MethodPut,
+		}),
+		middlewares.NewXSS("block", true),
+	)
+
+	return middlewares.Handle(next)
 }
 
 // Resources defines the set of resources (URL path, HTTP method, and handler) that this service responds to
