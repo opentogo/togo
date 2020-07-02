@@ -40,7 +40,7 @@ var (
 	buf     bytes.Buffer
 	service = Init("togo-testing", Config{
 		HTTPAddr:     "0.0.0.0",
-		HTTPPort:     3000,
+		HTTPPort:     "3000",
 		IdleTimeout:  30,
 		ReadTimeout:  5,
 		WriteTimeout: 10,

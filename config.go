@@ -8,7 +8,7 @@ import (
 // Config holds info required to configure a togo.server.
 type Config struct {
 	HTTPAddr     string `json:"http_addr"`
-	HTTPPort     int    `json:"http_port"`
+	HTTPPort     string `json:"http_port"`
 	IdleTimeout  int    `json:"idle_timeout"`
 	ReadTimeout  int    `json:"read_timeout"`
 	WriteTimeout int    `json:"write_timeout"`
@@ -25,7 +25,7 @@ func LoadJSONFile(filename string) (config Config) {
 	)
 	config = Config{
 		HTTPAddr:     "0.0.0.0",
-		HTTPPort:     3000,
+		HTTPPort:     "3000",
 		IdleTimeout:  30,
 		ReadTimeout:  5,
 		WriteTimeout: 10,

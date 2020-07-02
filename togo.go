@@ -40,7 +40,7 @@ func Init(appName string, config Config) *Togo {
 		logFilename: config.LogFilename,
 		Router:      &router.Router{},
 		server: &http.Server{
-			Addr:         fmt.Sprintf("%s:%d", config.HTTPAddr, config.HTTPPort),
+			Addr:         fmt.Sprintf("%s:%s", config.HTTPAddr, config.HTTPPort),
 			ReadTimeout:  time.Duration(config.ReadTimeout) * time.Second,
 			WriteTimeout: time.Duration(config.WriteTimeout) * time.Second,
 			IdleTimeout:  time.Duration(config.IdleTimeout) * time.Second,

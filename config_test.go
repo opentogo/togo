@@ -41,7 +41,7 @@ func TestConfig(t *testing.T) {
 
 		config := LoadJSONFile(configFilename)
 		assert.Equal(t, "0.0.0.0", config.HTTPAddr)
-		assert.Equal(t, 3000, config.HTTPPort)
+		assert.Equal(t, "3000", config.HTTPPort)
 		assert.Equal(t, 30, config.IdleTimeout)
 		assert.Equal(t, 5, config.ReadTimeout)
 		assert.Equal(t, 10, config.WriteTimeout)
